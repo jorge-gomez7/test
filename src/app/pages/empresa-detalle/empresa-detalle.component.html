@@ -1,0 +1,98 @@
+<div class="row" id="row">
+    <div class="col-md-12">
+        <div class="card" id="content">
+            <div id="header">
+                <h4 class="card-title">Detalle de Empresa</h4>
+                <h6 class="card-subtitle">puede eliminar o editar la empresa</h6>
+                <a (click)="updateCompany(empresa.id)" id="boton-cancelar">Editar</a>
+                <a (click)="deleteCompany()" id="boton" type="submit">Eliminar</a>
+            </div>
+
+            <div class="card-body">
+
+
+                <div class="form-body">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nombre Comercial.</label>
+                                <p>{{empresa.nombre_comercial}}</p>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Razon Social.</label>
+                                <p>{{empresa.razon_social}}</p>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Télefono</label>
+                                <P>{{empresa.telefono}}</P>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Correo Electrónico</label>
+                                <P>{{empresa.correo}}</P>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>NIT</label>
+                                <p>{{empresa.nit}}</p>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Estado</label>
+                                <p>{{empresa.estado}}</p>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Fecha de creación</label>
+                                <p>{{empresa.created_at | date: 'dd-MM-yy HH:mm'}}</p>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Fecha de modificación</label>
+                                <p>{{empresa.updated_at | date: 'dd-MM-yy HH:mm'}}</p>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="form-group">
+                                <label>Dirección</label>
+                                <p>{{empresa.direccion}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>

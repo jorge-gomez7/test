@@ -1,0 +1,92 @@
+<div class="row" id="row">
+    <div class="col-md-12">
+        <div class="card" id="content">
+
+            <div class="card-body">
+                <form autocomplete="off" [formGroup]="empresaForm" (ngSubmit)="addCompany()">
+                    <div id="header">
+                        <h4 class="card-title">Crear empresa</h4>
+                        <h6 class="card-subtitle">utiliza los campos para actualizar los datos</h6>
+                        <button class="btn" routerLink="/empresas" id="boton-cancelar">Cancelar</button>
+                        <button class="btn" routerLink="/crear-empresa" id="boton" type="submit">Guardar</button>
+                    </div>
+                    <div class="form-body">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nombre Comercial.</label>
+                                    <input type="text" class="form-control" formControlName="nombre_comercial">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Razon Social.</label>
+                                    <input type="text" class="form-control" formControlName="razon_social">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Télefono</label>
+                                    <input type="text" class="form-control" formControlName="telefono">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Correo Electrónico</label>
+                                    <input type="email" class="form-control" formControlName="correo">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>NIT</label>
+                                    <input type="text" class="form-control" formControlName="nit">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <input type="text" class="form-control" formControlName="estado">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Dirección</label>
+                                    <input type="text" class="form-control" formControlName="direccion">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-danger">
+                                <p *ngIf="campoNoValido('nombre_comercial')">El nombre comercial es obligatorio</p>
+                                <p *ngIf="campoNoValido('razon_social')">La razon social es obligatoria</p>
+                                <p *ngIf="campoNoValido('telefono')">El telefono es obligatorio.</p>
+                                <p *ngIf="campoNoValido('correo')">El correo es obligatorio y debe ser válido.</p>
+                                <p *ngIf="campoNoValido('nit')">El nit es obligatorio.</p>
+                                <p *ngIf="campoNoValido('estado')">El estado es obligatorio.</p>
+                                <p *ngIf="campoNoValido('direccion')">La dirección es obligatoria.</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
